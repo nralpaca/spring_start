@@ -54,14 +54,14 @@ public class BoardController {
         return "board/update.html";
     }
 
-    @PutMapping("/post/edit/{no}")
+    @PostMapping("/post/edit/{no}/update")
     public String update(BoardDto boardDTO) {
         boardService.savePost(boardDTO);
 
         return "redirect:/";
     }
 
-    @DeleteMapping("/post/{no}")
+    @PostMapping("/post/{no}/delete")
     public String delete(@PathVariable("no") Long no) {
         boardService.deletePost(no);
 
