@@ -17,7 +17,7 @@
         <button>Edit</button>
     </a>
 
-    <form id="delete-form" th:action="@{'/post/' + ${boardDto.id}}" method="post">
+    <form id="delete-form" th:action="@{'/post/' + ${boardDto.id} + '/delete'}" method="post">
         <input type="hidden" name="_method" value="delete"/>
         <button id="delete-btn">Delete</button>
     </form>
